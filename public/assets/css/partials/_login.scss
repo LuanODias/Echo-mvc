@@ -7,7 +7,6 @@
     width: 1440px;
     display: flex;
     flex-direction: row;
-    background-color: $white;
 
     @include laptop(){
         width: 1350px;
@@ -258,6 +257,7 @@
     height: 650px;
     margin-left: -5vw;
     border: 0.5px solid $echo;
+    margin-top: -3vh;
 
     @include tablet(){
         height: 600px;

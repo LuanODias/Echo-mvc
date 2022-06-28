@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use PDOException;
+
 class Funcionario extends Connection
 {
     private $nome_table;

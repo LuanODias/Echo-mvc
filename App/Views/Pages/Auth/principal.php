@@ -4,9 +4,9 @@
 <?php
 if (@$_SESSION["msgLoginSucesso"] == true) {
     ?>
-    <span class="msg-success">
-            <p><?php print_r($_SESSION["msgLoginSucesso"])?></p>
-        </span>
+        <div class="notification is-success">
+                <p style="color: green; text-align: center; text-decoration: underline; margin-top: 5vh;">Bem vindo <strong><?php echo $_SESSION["usuario"]["razao_social"];?></strong></p>
+            </div>
     <?php
     $_SESSION["msgLoginSucesso"] = false;
 }

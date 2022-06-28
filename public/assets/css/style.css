@@ -368,7 +368,6 @@ img {
   display: -ms-flexbox;
   display: flex;
   flex-direction: row;
-  background-color: #FFFFFF;
 }
 
 @media screen and (max-width: 1470px) {
@@ -685,6 +684,7 @@ img {
   height: 650px;
   margin-left: -5vw;
   border: 0.5px solid #6D995D;
+  margin-top: -3vh;
 }
 
 @media screen and (max-width: 1330px) {
@@ -1174,6 +1174,7 @@ img {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  z-index: -1;
 }
 
 @media screen and (max-width: 1430px) {

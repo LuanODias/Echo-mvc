@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use PDOException;
+
 class Chamado extends Connection
 {
     private $nome_table;

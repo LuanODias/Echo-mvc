@@ -6,10 +6,10 @@
             <h1>Registre-se Gratuitamente</h1>
             <p>gerencie sua empresa pensando verde!</p>
             <?php
-            if (!empty($_SESSION["cadastroSuccess"]) &&  $_SESSION["cadastroSuccess"] == true) {
+            if (!empty($_SESSION["msgAdicionadoSucesso"]) &&  $_SESSION["msgAdicionadoSucesso"] == true) {
             ?>
                 <span class="msg-success">
-                    <p>Cadastro realizado com sucesso!</p>
+                    <p style="color: green; text-decoration: underline;">Cadastro realizado com sucesso!</p>
                 </span>
             <?php
                 $_SESSION["cadastroSuccess"] = false;
@@ -17,10 +17,10 @@
             ?>
 
             <?php
-            if (!empty($_SESSION["cadastroNovoUsuarioErro"]) &&  $_SESSION["cadastroNovoUsuarioErro"] == true) {
+            if (!empty($_SESSION["msgAdicionadoErro"]) &&  $_SESSION["msgAdicionadoErro"] == true) {
             ?>
                 <span class="msg-error">
-                    <p><?php print_r($_SESSION["cadastroNovoUsuarioErro"][2]); ?></p>
+                    <p style="color: red; text-decoration: underline">Erro! O usuário já existe</p>
                 </span>
             <?php
                 $_SESSION["cadastroNovoUsuarioErro"] = false;
@@ -72,7 +72,7 @@
                 if (!empty($_SESSION["msgLoginErro"]) && $_SESSION["msgLoginErro"] == true) {
                 ?>
                     <span class="msg-error">
-                        <p>Email ou senha incorretos!</p>
+                        <p style="color: red; text-decoration: underline;">Email ou senha incorretos!</p>
                     </span>
                 <?php
                     $_SESSION["msgLoginErro"] = false;

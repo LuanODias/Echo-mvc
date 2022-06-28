@@ -20,12 +20,7 @@
                 <li><a href="/Relatorios/index/" <?php if($nome_controller=="Relatorios") echo "style='background-color:#95bb87'";?> class="nav-link" style="border-bottom-right-radius: 40px; border-top-right-radius: 40px;">Relatórios</a></li>
             </ul>
         </div>
-        <?php if(@$_SESSION["usuario"]["id"]){?>
-
-            <div class="notification is-success">
-                <p>Olá <strong><?php echo $_SESSION["usuario"]["razao_social"];?></strong></p>
-            </div>
             <a href="/Usuarios/logout/" class="btnAcessar">Sair</a>
-        <?php }?>
+
     </nav>
 </header>
