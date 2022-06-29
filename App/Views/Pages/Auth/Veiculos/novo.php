@@ -3,8 +3,8 @@ include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/header.php");
 include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/Element/nav-menu-autenticado.php");
 ?>
 
-<h1 class="title">Cadastro de <?php echo $vars["nameController"];?></h1>
 
+<h1 class="title">Cadastro de <?php echo $vars["nameController"];?></h1>
 <a style="color: white;" href='/<?php echo $vars["nameController"];?>/index'><span class="btncrud">< Voltar</span></a>
 
 <form action="/<?php echo $vars["nameController"];?>/novo" method="POST">

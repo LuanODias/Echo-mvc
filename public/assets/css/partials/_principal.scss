@@ -3,7 +3,6 @@
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    height:80vh;
     align-items: center;
     justify-content: space-around;
 
@@ -72,6 +71,13 @@
     margin-left: auto;
     margin-right: auto;
     color: $green;
+    transition: 0.5s ease;
+
+    &:hover{
+        cursor: pointer;
+        color: $white;
+        background-color: $echo;
+    }
 
 
     @include tabletS{
@@ -92,12 +98,19 @@
     width: 800px;
     height: 100px;
     border-radius: 5px;
+    margin-top: 5vh;
     margin-left: auto;
     margin-right: auto;
     font-size: 42px;
     color: $green;
     transition: .3s ease-in;
 
+    &:hover{
+        color: $white;
+        background-color: $echo;
+    }
+
+    
 
     @include tabletS{
         margin-top: 55vh;
@@ -130,6 +143,11 @@
 
 }
 
+#svgadd{
+        width: 70px;
+        margin-left: auto;
+        margin-right: auto;
+}
 
 .waveprincipal{
     position: fixed;

@@ -101,12 +101,6 @@ img{
     @include smartphone(){
         display: none;
     }
-
-    li:nth-child(1){
-        border-bottom-left-radius: 40px;
-        border-top-left-radius: 40px;
-    }   
-  
 }
 
 
@@ -155,7 +149,21 @@ img{
     &:hover{
         color: $white;
         background-color: $echo;
-    }
+        }
+}
+
+#hover-left:hover{
+    color: $white;
+    background-color: $echo;
+    border-bottom-left-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+#hover-right:hover{
+    color: $white;
+    background-color: $echo;
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
 }
 
 .burger{

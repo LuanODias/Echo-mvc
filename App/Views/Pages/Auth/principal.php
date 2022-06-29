@@ -50,6 +50,7 @@ if (@$_SESSION["msgLoginSucesso"] == true) {
             
         </div>
     </div>
+    <a href="/Site/chamados/" class="btnrelatorio">Relatorios</a>
     <img style="z-index: -1;" src="/public/assets/svg/Wave.svg" alt="Wave" class="wavecarbono">
 
 <?php include("footer.php");?>

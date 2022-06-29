@@ -131,11 +131,6 @@ img {
   }
 }
 
-.nav-list li:nth-child(1) {
-  border-bottom-left-radius: 40px;
-  border-top-left-radius: 40px;
-}
-
 .btnAcessar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -193,6 +188,20 @@ img {
 .nav-link:hover {
   color: #FFFFFF;
   background-color: #6D995D;
+}
+
+#hover-left:hover {
+  color: #FFFFFF;
+  background-color: #6D995D;
+  border-bottom-left-radius: 40px;
+  border-top-left-radius: 40px;
+}
+
+#hover-right:hover {
+  color: #FFFFFF;
+  background-color: #6D995D;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
 }
 
 .burger {
@@ -1663,7 +1672,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 80vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1757,6 +1765,14 @@ p {
   margin-left: auto;
   margin-right: auto;
   color: #405936;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.btngerenciamento:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #6D995D;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1784,12 +1800,18 @@ p {
   width: 800px;
   height: 100px;
   border-radius: 5px;
+  margin-top: 5vh;
   margin-left: auto;
   margin-right: auto;
   font-size: 42px;
   color: #405936;
   -webkit-transition: .3s ease-in;
   transition: .3s ease-in;
+}
+
+.btnrelatorio:hover {
+  color: #FFFFFF;
+  background-color: #6D995D;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1831,6 +1853,12 @@ p {
   .btnrelatorio {
     margin-top: 90vh;
   }
+}
+
+#svgadd {
+  width: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .waveprincipal {
@@ -1912,6 +1940,19 @@ p {
   text-align: center;
 }
 
+.add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .inputs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1922,7 +1963,6 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 30px;
 }
 
 .inputs label {
@@ -1940,9 +1980,6 @@ p {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 30px;
-}
-
-.btncrud button {
   margin: 30px;
   width: 300px;
   height: 50px;
