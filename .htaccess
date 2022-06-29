@@ -1,12 +1,12 @@
-sudo rm -r E
+Options -Indexes
 RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/.]+)\.html$  application/index.php?key=$1 [L,QSA]
 
-RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+RewriteRule ^$  application/index.php?key=index [L,QSA]
 
-ErrorDocument 403 https://senai.sc.edu.br
-
-Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^.]+?)/?$ $1.html [L]
