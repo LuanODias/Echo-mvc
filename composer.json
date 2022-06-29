@@ -17,6 +17,6 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "php" : "7.3.33"
+        "php" : "8.1.4"
     }
 }
