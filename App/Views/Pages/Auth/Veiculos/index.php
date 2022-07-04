@@ -8,7 +8,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/Element/nav-menu-aute
 
 
     <h1 class="title" style="float: left;margin-left: 42%"><?php echo $vars["nameController"];?> <a href="/<?php echo $vars["nameController"];?>/novo"></h1>
-    <span><img style="width:1%!important;display: unset!important;align-items: center;margin-left: 10px;margin-top: 30px;" src="/public/assets/img/add.png" alt=""></a></span>
+    <span><img style="width:3%!important;display: unset!important;align-items: center;margin-left: 20px;margin-top: 25px;" src="/public/assets/svg/AddVeic.svg" alt=""></a></span>
 
         <!--<h1 class="title" style="display: block;margin-left:auto;margin-right: auto;">Veículos</h1>
         <a href="/App/Views/Pages/Auth/Veiculos/novo.php"><img id="svgadd" src="/public/assets/svg/AddVeic.svg"></a>
@@ -17,20 +17,19 @@ include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/Element/nav-menu-aute
 
     <br><br><br><br>
 
-    <?php include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/Element/msg.php"); ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/Element/msg.php");?>
 
 
-    <form action="/<?php echo $vars["nameController"]; ?>/index" method="POST">
+    <form action="/<?php echo $vars["nameController"];?>/index" method="POST">
         <input type="hidden" name="acao" value="buscar">
         <div class="inputs">
             <div class="input-row">
                 <label for="">Placa</label>
-                <input autocomplete="off" name="placa" type="text" placeholder="Digite uma Placa para pesquisar na tabela">
+                <input pattern="^([^0-9]{3}-[0-9][A-Za-z0-9][0-9][0-9])" onkeyup="validarPlaca(this)"  autocomplete="off" id="placa" name="placa" type="text" minlength="8" maxlength="8" placeholder="Digite uma Placa para cadastrar na tabela">
 
                 <label for="">Marca</label>
                 <input autocomplete="off" name="marca" type="text" placeholder="Digite uma Marca para pesquisar na tabela">
             </div>
-
             <div class="input-row">
                 <label for="">Modelo</label>
                 <input autocomplete="off" name="modelo" type="text" placeholder="Digite um Modelo para pesquisar na tabela">
@@ -76,6 +75,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/Element/nav-menu-aute
     <?php } ?>
 </section>
 <img style="z-index: -1;" src="/public/assets/svg/Wave.svg" alt="Wave" class="wavecarbono">
+<script src="/App/Views/Pages/Auth/validacoes.js"></script>
 </body>
 
 </html>

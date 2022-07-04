@@ -93,15 +93,17 @@ class Funcionario extends Connection
                 $conn = $this->connect();
                 $sql = "UPDATE $this->nome_table SET nome = '$nome',cpf = '$cpf',usuario_id=$this->login_id WHERE (`id` = $id)";
                 $stmt = $conn->prepare($sql);
-                $sucesso = $stmt->execute();
+                $sucesso = $stmt->execute();       
                 if (!$sucesso) {
                     return[
                         "msg_success"=>false,
                         "msg_erros"=>$stmt->errorInfo()
                     ];
                 }else{
+                    $_SESSION["funcionarioDisponivel"] == true;
                     return[
                         "msg_success"=>true
+                    
                     ];
                 }
                 return true;

@@ -2,7 +2,9 @@
 include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/header.php");
 include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/Element/nav-menu-autenticado.php");
 ?>
-    <h1 class="title" style="float: left;margin-left: 42%">Relatórios</h1>
+
+    <section class="formulario">
+    <h1 class="title">Relatórios</h1>
 <br><br><br>
 
 <form action="/<?php echo $vars["nameController"];?>/index" method="POST">
@@ -11,6 +13,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/Element/nav-menu-aute
             <label for="">Tipo</label>
             <select name="tipo_relatorio" required>
                 <option value="">Selecione</option>
+                <option value="co2veiculo">CO2 Veículo</option>
                 <option value="km_rodado_veiculo">KM Rodado Veiculo</option>
                 <option value="consumo_veiculo_funcionario">Consumo de Veiculo por Funcionário</option>
                 <option value="consumo_km_funcionario">Consumo KM por Funcionário</option>
@@ -31,7 +34,8 @@ include($_SERVER["DOCUMENT_ROOT"] . "/App/Views/Pages/Auth/Element/nav-menu-aute
     </div>
     <span class="inputs"><input type="submit" value="Gerar" class="btncrud" /></span>
 </form>
-
+</section>
 <?php include($_SERVER["DOCUMENT_ROOT"]."/App/Views/Pages/Auth/footer.php");?>
+<img style="z-index: -1;" src="/public/assets/svg/Wave.svg" alt="Wave" class="wavecarbono">
 </body>
 </html>

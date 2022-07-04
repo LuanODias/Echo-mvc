@@ -20,7 +20,7 @@
 
             <ul class="nav-list">
                 <li><a href="/Site/home/" id="hover-left" <?php if($nome_controller=="Site" && $nome_action=="home") echo "style='background-color:#6D995D; color: white; border-bottom-left-radius: 40px;border-top-left-radius: 40px;'";?> class="nav-link">Home</a></li>
-                <li><a href="https://github.com/LuanODias-mvc" class="nav-link" target="_blank">GitHub</a></li>
+                <li><a href="https://github.com/LuanODias/projetoecho" class="nav-link" target="_blank">GitHub</a></li>
                 <li><a href="/Site/integrantes/" <?php if($nome_controller=="Site" && $nome_action=="integrantes") echo "style='background-color:#6D995D; color:white;'";?> class="nav-link">Integrantes</a></li>
                 <li><a href="/Site/carbono/" id="hover-right" <?php if($nome_controller=="Site" && $nome_action=="carbono") echo "style='background-color:#6D995D; color:white;border-bottom-right-radius: 40px;border-top-right-radius: 40px;'";?> class="nav-link">Carbono</a></li>
             </ul>

@@ -5,14 +5,15 @@
         <div class="container-left">
             <h1>Registre-se Gratuitamente</h1>
             <p>gerencie sua empresa pensando verde!</p>
+
             <?php
-            if (!empty($_SESSION["msgAdicionadoSucesso"]) &&  $_SESSION["msgAdicionadoSucesso"] == true) {
+            if (!empty($_SESSION["msgAdicionadoSucesso"]) && $_SESSION["msgAdicionadoSucesso"] == true) {
             ?>
                 <span class="msg-success">
                     <p style="color: green; text-decoration: underline;">Cadastro realizado com sucesso!</p>
                 </span>
             <?php
-                $_SESSION["cadastroSuccess"] = false;
+                $_SESSION["msgAdicionadoSucesso"] = false;
             }
             ?>
 
@@ -23,7 +24,7 @@
                     <p style="color: red; text-decoration: underline">Erro! O usuário já existe</p>
                 </span>
             <?php
-                $_SESSION["cadastroNovoUsuarioErro"] = false;
+                $_SESSION["msgAdicionadoErro"] = false;
             }
             ?>
 
@@ -34,7 +35,7 @@
                     <div class="first-row">
                         <div class="column">
                             <label for="cnpj">CNPJ</label>
-                            <input id="cnpj" name="cnpj" type="text" autocomplete="off" maxlength="18" required>
+                            <input pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})" id="cnpj" name="cnpj" onkeypress="$(this).mask('00.000.000/0000-00')" type="text" autocomplete="off" minlength="18" maxlength="18" required>
                         </div>
 
                         <div class="column">
@@ -99,6 +100,7 @@
     </form>
     </div>
 </section>
-<img src="/public/assets/svg/Wave.svg" alt="Wave" class="wavecarbono">
-<script src="../../../public/assets/js/main.js"></script>
+<?php include("wave.php");?>
+<script src="../../../public/assets/js/jquery-3.6.0.slim.min.js"></script>
+<script src="../../../public/assets/js/jQueryMask/dist/jquery.mask.min.js"></script>
 <?php include("footer.php"); ?>

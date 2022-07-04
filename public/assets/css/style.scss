@@ -80,6 +80,11 @@ img{
     }
 }
 
+.datas{
+    margin-top: 2vh;
+    margin-left: 42vw;
+}
+
 .nav-list{
     height: 45px;
     border-radius: 40px;
@@ -173,6 +178,37 @@ img{
         display: inline-block;
         margin-left: auto
     }
+}
+
+.inputs-relatorios{
+    display: flex;
+
+}
+
+
+.inputs-chamados{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+select{
+    border: 2px solid $echo;
+    border-radius: 10px;
+    color: #405936;
+    padding: 0.5em; 
+    font-size: 20px;
+}
+
+.row-center{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 

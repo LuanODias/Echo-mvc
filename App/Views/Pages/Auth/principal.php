@@ -34,7 +34,7 @@ if (@$_SESSION["msgLoginSucesso"] == true) {
                 suas frotas de carro, para que sua empresa seja 
                 mais organizada.
             </p>
-            <a href="/Site/funcionarios/" class="btngerenciamento">Gerenciar</a>
+            <a href="/Funcionarios/index/" class="btngerenciamento">Gerenciar</a>
         </div>
         <div class="card-principal">
             <div class="card-image">
@@ -46,11 +46,12 @@ if (@$_SESSION["msgLoginSucesso"] == true) {
                 veículo, para que assim sua empresa tenha total controle 
                 administrativo.
             </p>
-            <a href="/Site/chamados/" class="btngerenciamento">Gerenciar</a>
+            <a href="/Chamados/index/" class="btngerenciamento">Gerenciar</a>
             
         </div>
     </div>
-    <a href="/Site/chamados/" class="btnrelatorio">Relatorios</a>
-    <img style="z-index: -1;" src="/public/assets/svg/Wave.svg" alt="Wave" class="wavecarbono">
+    <a href="/Relatorios/index/" class="btnrelatorio">Relatorios</a>
+    <?php include("wave.php");?>
+    
 
 <?php include("footer.php");?>

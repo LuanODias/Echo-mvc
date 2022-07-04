@@ -1,5 +1,7 @@
 <?php
 
+include ("Auth.php");
+
 abstract class Controllers {
     protected final function view(string $_name, array $vars = []) {
         $_filename = $_SERVER["DOCUMENT_ROOT"]."/App/Views/Pages/{$_name}.php";

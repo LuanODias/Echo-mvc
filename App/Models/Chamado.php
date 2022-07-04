@@ -17,14 +17,14 @@ class Chamado extends Connection
     public function index($km_rodado=null,$funcionario_id=null,$veiculo_id=null)
     {
         $conn = $this->connect();
-        $sql = "SELECT $this->nome_table.id,$this->nome_table.disponivel,$this->nome_table.km_rodado,$this->nome_table.data,veiculos.placa,funcionarios.nome,funcionarios.cpf
-            FROM $this->nome_table 
-            JOIN veiculos ON (veiculos.id=$this->nome_table.veiculo_id) 
-            JOIN funcionarios ON (funcionarios.id=$this->nome_table.funcionario_id) 
-         WHERE $this->nome_table.`usuario_id`=$this->login_id";
+        $sql = "SELECT chamados.id,chamados.disponivel,chamados.km_rodado,chamados.data,veiculos.autonomia,veiculos.placa,funcionarios.nome,funcionarios.cpf
+            FROM chamados
+            JOIN veiculos ON (veiculos.id=chamados.veiculo_id) 
+            JOIN funcionarios ON (funcionarios.id=chamados.funcionario_id) 
+         WHERE chamados.`usuario_id`=$this->login_id";
 
         if(!empty($km_rodado)){
-            $sql .=" AND nome='$km_rodado'";
+            $sql .=" AND km_rodado='$km_rodado'";
         }
         if(!empty($funcionario_id)){
             $sql .=" AND funcionario_id='$funcionario_id'";
@@ -78,7 +78,7 @@ class Chamado extends Connection
     public function getById($id)
     {
         $conn = $this->connect();
-        $sql = "select * from $this->nome_table where id=$id";
+        $sql = "select * from chamados where id=$id";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetch();
@@ -98,7 +98,7 @@ class Chamado extends Connection
                 $disponivel = $_POST["disponivel"];
 
                 $conn = $this->connect();
-                $sql = "UPDATE $this->nome_table SET km_rodado = '$km_rodado',funcionario_id = '$funcionario_id',veiculo_id='$veiculo_id',usuario_id=$this->login_id,disponivel='$disponivel' WHERE (`id` = $id)";
+                $sql = "UPDATE $this->nome_table SET km_rodado = '$km_rodado',funcionario_id = '$funcionario_id',veiculo_id='$veiculo_id',usuario_id=$this->login_id,   disponivel='$disponivel' WHERE (`id` = $id)";
                 $stmt = $conn->prepare($sql);
                 $sucesso = $stmt->execute();
                 if (!$sucesso) {
@@ -106,7 +106,9 @@ class Chamado extends Connection
                         "msg_success"=>false,
                         "msg_erros"=>$stmt->errorInfo()
                     ];
-                }else{
+                }else if($disponivel === "N" || $disponivel === ''){
+                    $_SESSION["veiculoDisponivel"] == false;
+                    $_SESSION["funcionarioDisponivel"] == false;
                     return[
                         "msg_success"=>true
                     ];

@@ -4,9 +4,9 @@ namespace App\Models;
 
 abstract class Connection{
 
-    private $dbname = 'mysql:host=localhost;dbname=echo';
-    private $user = 'root';
-    private $pass = '';
+    private $dbname = 'mysql:host=echo.cioy4joo3i3i.us-east-1.rds.amazonaws.com:3306;dbname=echo';
+    private $user = 'enzo';
+    private $pass = 'senha-banco';
 
     public $login_id;
 

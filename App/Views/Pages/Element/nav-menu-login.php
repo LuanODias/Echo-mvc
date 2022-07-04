@@ -7,7 +7,7 @@
             <div class="burger"><img src="/public/assets/svg/burg.svg"></div>
             <ul class="nav-list">
                 <li><a href="/Site/home/" id="hover-left" class="nav-link">Home</a></li>
-                <li><a href="https://github.com/LuanODias-mvc" class="nav-link" target="_blank">GitHub</a></li>
+                <li><a href="https://github.com/LuanODias/projetoecho" class="nav-link" target="_blank">GitHub</a></li>
                 <li><a href="/Site/integrantes/"class="nav-link">Integrantes</a></li>
                 <li><a href="/Site/carbono/" id="hover-right" class="nav-link">Carbono</a></li>
             </ul>

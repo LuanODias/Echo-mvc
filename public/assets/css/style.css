@@ -99,6 +99,11 @@ img {
   }
 }
 
+.datas {
+  margin-top: 2vh;
+  margin-left: 42vw;
+}
+
 .nav-list {
   height: 45px;
   border-radius: 40px;
@@ -213,6 +218,56 @@ img {
     display: inline-block;
     margin-left: auto;
   }
+}
+
+.inputs-relatorios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inputs-chamados {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+select {
+  border: 2px solid #6D995D;
+  border-radius: 10px;
+  color: #405936;
+  padding: 0.5em;
+  font-size: 20px;
+}
+
+.row-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container-carbono {
@@ -1983,6 +2038,7 @@ p {
   margin: 30px;
   width: 300px;
   height: 50px;
+  outline: 0;
   border-radius: 10px;
   border-color: #6D995D;
   color: #FFFFFF;
@@ -1999,7 +2055,7 @@ table {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 20px;
-  width: 1000px;
+  width: 1200px;
   table-layout: fixed;
   margin-right: auto;
   margin-left: auto;

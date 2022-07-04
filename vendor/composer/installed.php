@@ -1,22 +1,22 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '0ddc16e0d155c9f098fca732d05b82b3540a74a2',
+        'reference' => NULL,
         'name' => 'luandias/echomvc',
         'dev' => true,
     ),
     'versions' => array(
         'luandias/echomvc' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '0ddc16e0d155c9f098fca732d05b82b3540a74a2',
+            'reference' => NULL,
             'dev_requirement' => false,
         ),
     ),
